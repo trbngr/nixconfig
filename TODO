@@ -1,0 +1,5 @@
+- [ ] Setup Yabai and skhd
+
+    https://github.com/lukejcollins/nix-multi-system-flake/blob/main/baremetal/darwin/dotfiles/yabai/yabairc
+
+- [ ] Get Doom emacs working
