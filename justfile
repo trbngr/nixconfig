@@ -30,3 +30,13 @@ dev:
 [group('Main')]
 run:
   nix run
+
+# generate node packages with node2nix
+[group('dev')]
+gen-node-packages:
+  nix-env -f '<nixpkgs>' -iA nodePackages.node2nix
+  node2nix -d \
+    --input modules/home/npm-packages/node-packages.json \
+    --composition modules/home/npm-packages/composition.nix \
+    --output modules/home/npm-packages/packages.nix \
+    --node-env modules/home/npm-packages/env.nix

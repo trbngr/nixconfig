@@ -1,5 +1,11 @@
 { ... }:
 {
+  home.shellAliases = {
+    ".." = "cd ..";
+    "..." = "cd ../..";
+    "...." = "cd ../../..";
+  };
+
   programs = {
     # For macOS's default shell.
     zsh = {

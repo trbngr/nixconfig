@@ -1,4 +1,7 @@
 { pkgs, ... }:
+# let
+#   extraNodePackages = import ../flake/npm-packages/default.nix { };
+# in
 {
   # Nix packages to install to $HOME
   #
@@ -19,6 +22,9 @@
     (ripgrep.override { withPCRE2 = true; })
     sd
     tree
+
+    # node packages
+    # "@google/gemini-cli"
   ];
 
   # Programs natively supported by home-manager.

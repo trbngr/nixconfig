@@ -6,8 +6,7 @@
         name = "nixos-unified-template-shell";
         meta.description = "Shell environment for modifying this Nix configuration";
         packages = with pkgs; [
-          just
-          nixd
+          node2nix # For generating node packages from package.json
         ];
       };
     };
