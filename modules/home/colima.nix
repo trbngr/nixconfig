@@ -10,31 +10,37 @@ in
   home.packages = with pkgs; [
     colima
     docker
+    kubectl
   ];
 
   home.sessionVariables = {
     COLIMA_HOME = colimaHome;
+    XDG_CONFIG_HOME = config.xdg.configHome;
   };
 
   launchd.agents.colima = {
-    enable = true;
+    enable = false;
     config = {
       ProgramArguments = [
         "${pkgs.colima}/bin/colima"
         "start"
-        "--foreground"
+        "-f"
       ];
       Label = "com.colima.default";
       RunAtLoad = true;
-      KeepAlive = true;
+      KeepAlive = {
+        SuccessfulExit = true;
+      };
 
-      StandardOutPath = "${colimaHome}/default/launchd.stdout.log";
-      StandardErrorPath = "${colimaHome}/default/launchd.stderr.log";
+      StandardOutPath = "${colimaHome}/launchd.stdout.log";
+      StandardErrorPath = "${colimaHome}/launchd.stderr.log";
 
       EnvironmentVariables = {
-        COLIMA_HOME = colimaHome;
         PATH = "${pkgs.colima}/bin:${pkgs.docker}/bin:/usr/bin:/bin:/usr/sbin:/sbin";
+        COLIMA_HOME = colimaHome;
+        XDG_CONFIG_HOME = config.xdg.configHome;
       };
+      WorkingDirectory = config.home.homeDirectory;
     };
   };
 }

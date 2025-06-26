@@ -1,7 +1,7 @@
 {
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
-        "flake.nix": ".envrc, flake.lock, justfile"
+        "flake.nix": ".envrc, flake.lock"
     },
     "files.exclude": {
         "result": true,

@@ -14,6 +14,7 @@
       syntaxHighlighting.enable = true;
       envExtra = ''
         # Custom ~/.zshenv goes here
+        export GEMINI_API_KEY="AIzaSyBN8gcv85-x4Cc72ipJOGubHAmO1vL8rMk"
       '';
       profileExtra = ''
         # Custom ~/.zprofile goes here
