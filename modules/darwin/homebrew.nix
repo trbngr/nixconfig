@@ -47,6 +47,8 @@ in
       polynome = 488165644;
       sonofield = 6740409139;
       msword = 462054704;
+      dropover = 1355679052;
+      coteditor = 1024640650;
     };
 
     casks = [

@@ -1,7 +1,10 @@
 { ... }:
 {
-  programs.zellij = {
+programs.zellij = {
     enable = true;
-    attachExistingSession = true;
+    attachExistingSession = false;
+    enableZshIntegration = false;
+    enableBashIntegration = false;
+    enableFishIntegration = false;
   };
 }

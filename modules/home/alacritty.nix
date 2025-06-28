@@ -1,14 +1,6 @@
 { ... }:
 {
-  programs.zellij = {
-    enable = true;
-    attachExistingSession = true;
-    enableZshIntegration = true;
-    enableBashIntegration = true;
-    enableFishIntegration = true;
-  };
-
-  programs.alacritty = {
+    programs.alacritty = {
     enable = true;
 
     # https://alacritty.org/config-alacritty.html
