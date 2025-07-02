@@ -1,6 +1,6 @@
 { ... }:
 {
-    programs.alacritty = {
+  programs.alacritty = {
     enable = true;
 
     # https://alacritty.org/config-alacritty.html

@@ -6,10 +6,8 @@
   # Search for packages here: https://search.nixos.org/packages
   #   or use `nix search nixpkgs <term>` in the terminal.
   home.packages = with pkgs; [
-    alacritty
     omnix
     devenv
-    difftastic
     libreoffice-bin
 
     # Unix tools

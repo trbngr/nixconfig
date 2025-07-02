@@ -1,0 +1,6 @@
+{ ... }:
+{
+  imports = [
+    ./edit-config.nix
+  ];
+}

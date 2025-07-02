@@ -17,19 +17,35 @@
         "*.swp"
       ];
 
-      aliases = {
-        ci = "commit";
-        st = "status";
-      };
+      aliases.ci = "commit";
+      aliases.st = "status";
 
       extraConfig = {
         init.defaultBranch = "main";
+
         core = {
           editor = "vim";
           autocrlf = "input";
         };
+
         pull.rebase = true;
         rebase.autoStash = true;
+
+        user = {
+          signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE+/vH6bhVCBdjUnDP/rlcfcjJxpq7iLgugq2NlP59Bi";
+        };
+
+        gpg = {
+          format = "ssh";
+          ssh = {
+            program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+          };
+        };
+
+        commit = {
+          gpgsign = true;
+        };
+
       };
 
       difftastic = {

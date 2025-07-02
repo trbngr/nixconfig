@@ -60,6 +60,12 @@ in
       # Utility Tools
       "pearcleaner"
       "shottr"
+      "1password"
+      "1password-cli"
+
+      # Audio tools
+      "soundsource"
+      "loopback"
 
       # Productivity Tools
       "itsycal"
@@ -67,8 +73,9 @@ in
       "stats"
 
       # Browsers
-      "librewolf"
-      "zen"
+      # "librewolf"
+      # "zen"
+      "orion"
 
       # Media
       "iina"

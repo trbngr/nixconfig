@@ -11,6 +11,7 @@ in
     colima
     docker
     kubectl
+    lens
   ];
 
   home.sessionVariables = {

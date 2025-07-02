@@ -1,14 +1,34 @@
-{ ... }:
+{ pkgs, ... }:
 {
   system = {
     defaults = {
       dock = {
-        # autohide = true;
-        # customize Hot Corners
-        wvous-tl-corner = 2; # top-left - Mission Control
-        # wvous-tr-corner = 13; # top-right - Lock Screen
-        wvous-bl-corner = 3; # bottom-left - Application Windows
-        wvous-br-corner = 4; # bottom-right - Desktop
+        autohide = false;
+        persistent-apps = [
+          { app = "/System/Applications/Mail.app"; }
+          { app = "/Applications/Orion.app"; }
+          { app = "/Applications/Logic Pro.app"; }
+          { app = "/Applications/Guitar Pro 8.app"; }
+          {
+            spacer = {
+              small = true;
+            };
+          }
+          { app = "/Applications/Spotify.app"; }
+          { app = "${pkgs.alacritty}/Applications/Alacritty.app"; }
+          # { app = "${pkgs.wezterm}/Applications/WezTerm.app"; }
+          { app = "${pkgs.obsidian}/Applications/Obsidian.app"; }
+          { app = "/System/Applications/System Settings.app"; }
+          {
+            spacer = {
+              small = true;
+            };
+          }
+          { app = "/Applications/Steam.app"; }
+          { app = "/Applications/Discord.app"; }
+          { app = "/Applications/Slack.app"; }
+          { app = "/Applications/zoom.us.app"; }
+        ];
       };
     };
   };

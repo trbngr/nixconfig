@@ -3,3 +3,7 @@
     https://github.com/lukejcollins/nix-multi-system-flake/blob/main/baremetal/darwin/dotfiles/yabai/yabairc
 
 - [ ] Get Doom emacs working
+
+- [ ] Restore Automator workflows
+
+    '~/Library/Workflows/Applications/Folder Actions'

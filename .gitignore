@@ -2,3 +2,7 @@ result
 .direnv
 prompt
 .DS_Store
+
+.nx/installation
+.nx/cache
+.nx/workspace-data

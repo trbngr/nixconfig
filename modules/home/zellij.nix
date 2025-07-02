@@ -1,6 +1,6 @@
 { ... }:
 {
-programs.zellij = {
+  programs.zellij = {
     enable = true;
     attachExistingSession = false;
     enableZshIntegration = false;

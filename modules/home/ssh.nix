@@ -1,18 +1,30 @@
 { ... }:
+let
+  authSocket = "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
+in
 {
+  home.sessionVariables = {
+    SSH_AUTH_SOCK = authSocket;
+  };
+
+  launchd.agents._1password-ssh-agent = {
+    enable = true;
+    config = {
+      ProgramArguments = [
+        "/bin/sh"
+        "-c"
+        "/bin/ln -sf \"${authSocket}\" \$SSH_AUTH_SOCK"
+      ];
+      Label = "com.1password.SSH_AUTH_SOCK";
+      RunAtLoad = true;
+    };
+  };
+
   programs.ssh = {
     enable = true;
 
-    # Set the top-level options that are available
-    forwardAgent = false;
-    serverAliveInterval = 60;
-    controlMaster = "auto";
-    controlPath = "~/.ssh/sockets/%r@%h-%p";
-    controlPersist = "10m";
-
-    # Inject the options that are missing from the top level
-    extraConfig = ''
-      IdentitiesOnly yes
-    '';
+    extraOptionOverrides = {
+      IdentityAgent = "\"${authSocket}\"";
+    };
   };
 }

@@ -5,6 +5,7 @@
   imports = [
     ./common
     ./dock.nix
+    ./dnsmasq.nix
     ./finder.nix
     ./fonts.nix
     ./homebrew.nix
@@ -20,6 +21,7 @@
 
   # Use TouchID for `sudo` authentication
   security.pam.services.sudo_local.touchIdAuth = true;
+  security.pam.services.sudo_local.watchIdAuth = true;
 
   # Configure macOS system
   # More macbookpros => https://github.com/ryan4yin/nix-darwin-kickstarter/blob/main/rich-demo/modules/system.nix

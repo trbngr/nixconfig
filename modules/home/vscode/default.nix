@@ -2,7 +2,7 @@
 {
   imports = [
     ./extensions.nix
-    ./user-settings.nix
+    ./user-settings
     ./user-tasks.nix
     ./keybindings.nix
     ./snippets.nix
