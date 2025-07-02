@@ -4,6 +4,7 @@
     defaults = {
       dock = {
         autohide = false;
+        tilesize = 48;
         persistent-apps = [
           { app = "/System/Applications/Mail.app"; }
           { app = "/Applications/Orion.app"; }
